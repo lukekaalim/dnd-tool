@@ -1,0 +1,8 @@
+test:
+  override:
+    - echo "test"
+deployment:
+  prod:
+    branch: master
+    commands:
+      - aws s3 sync player-screen s3://dnd-tool-player-screen-prod/ --delete
